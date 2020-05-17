@@ -1,4 +1,11 @@
 ## queuefy
+[![Build Status](https://travis-ci.com/qiwi/queuefy.svg?branch=master)](https://travis-ci.com/qiwi/queuefy)
+[![npm (tag)](https://img.shields.io/npm/v/queuefy)](https://www.npmjs.com/package/queuefy)
+[![deps](https://img.shields.io/david/qiwi/queuefy)](https://david-dm.org/qiwi/queuefy)
+[![Maintainability](https://api.codeclimate.com/v1/badges/2392bab0fb3bfa330f74/maintainability)](https://codeclimate.com/github/qiwi/queuefy/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/2392bab0fb3bfa330f74/test_coverage)](https://codeclimate.com/github/qiwi/queuefy/test_coverage)
+[![CodeStyle](https://img.shields.io/badge/code%20style-tslint--config--qiwi-brightgreen.svg)](https://github.com/qiwi/tslint-config-qiwi)
+
 Wrapper to make any async handler be like a single thread with queue.
 
 ## Install
