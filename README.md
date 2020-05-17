@@ -1,4 +1,4 @@
-## queuefy
+# queuefy
 [![Build Status](https://travis-ci.com/qiwi/queuefy.svg?branch=master)](https://travis-ci.com/qiwi/queuefy)
 [![npm (tag)](https://img.shields.io/npm/v/queuefy)](https://www.npmjs.com/package/queuefy)
 [![deps](https://img.shields.io/david/qiwi/queuefy)](https://david-dm.org/qiwi/queuefy)
@@ -33,3 +33,6 @@ const [r0, r1, r2, r3, r4] = await Promise.all([fn(4), fn(3), fn(2), fn(1), fn(0
 // r2 is 5
 // ... 
 ```
+
+## License
+[MIT](./LICENSE)
