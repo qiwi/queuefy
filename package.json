@@ -1,8 +1,8 @@
 {
   "name": "queuefy",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "private": false,
-  "description": "Tiny helper for TS/JS decorator building",
+  "description": "Wrapper to make any async handler be like a single thread with queue",
   "source": "src/main/ts/index.ts",
   "main": "target/bundle/queuefy.js",
   "module": "target/bundle/queuefy.mjs",
