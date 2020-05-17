@@ -1,6 +1,6 @@
 {
   "name": "queuefy",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "description": "Wrapper to make any async handler be like a single thread with queue",
   "source": "src/main/ts/index.ts",
