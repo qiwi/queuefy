@@ -24,17 +24,19 @@ export const getPromise = (): TInsideOutPromise => {
   return iop
 }
 
-export const invoke = (fn: IAsyncFn, task: ITask, next: any) => {
+export const invoke = (fn: IAsyncFn, task: ITask, next: any): void => {
   const {iop, args} = task
 
   try {
     fn(...args)
       .then(v => {
-        iop.resolve(v) && next()
+        iop.resolve(v)
+        next()
 
       })
       .catch(v => {
-        iop.reject(v) && next()
+        iop.reject(v)
+        next()
       })
 
   }
@@ -44,7 +46,7 @@ export const invoke = (fn: IAsyncFn, task: ITask, next: any) => {
   }
 }
 
-export const index = <T extends IAsyncFn>(fn: T): T => {
+export const queuefy = <T extends IAsyncFn>(fn: T): T => {
   const queue: ITaskQueue = []
   const processQueue = (): void => {
     const task = queue[0]
