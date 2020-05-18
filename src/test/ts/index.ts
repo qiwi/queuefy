@@ -63,4 +63,11 @@ describe('queuefy', () => {
 
     expect(await fn().catch((e: any) => e)).toEqual(new Error('foo'))
   })
+
+  it('handles not async fn result', async() => {
+    const target = (): any => 'foo'
+    const fn = queuefy(target)
+
+    expect(await fn()).toBe('foo')
+  })
 })

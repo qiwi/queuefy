@@ -12,7 +12,10 @@ export type ITask = {
 }
 export type ITaskQueue = Array<ITask>
 
-// TODO implement lightweight version of 'inside-out-promise'
+/**
+ * TODO implement lightweight version of 'inside-out-promise'
+ * @private
+ */
 export const getPromise = (): TInsideOutPromise => {
   const iop: any = {}
 
@@ -24,20 +27,37 @@ export const getPromise = (): TInsideOutPromise => {
   return iop
 }
 
+/**
+ * @private
+ * @param target
+ */
+export const isPromiseLike = (target: any): boolean =>
+  target
+    && typeof target.then === 'function'
+    && typeof target.catch === 'function'
+
 export const invoke = (fn: IAsyncFn, task: ITask, next: any): void => {
   const {iop, args} = task
 
   try {
-    fn(...args)
-      .then(v => {
-        iop.resolve(v)
-        next()
+    const res = fn(...args)
 
-      })
-      .catch(v => {
-        iop.reject(v)
-        next()
-      })
+    if (isPromiseLike(res)) {
+      res
+        .then(v => {
+          iop.resolve(v)
+          next()
+
+        })
+        .catch(v => {
+          iop.reject(v)
+          next()
+        })
+    }
+    else {
+      iop.resolve(res)
+      next()
+    }
 
   }
   catch (e) {
