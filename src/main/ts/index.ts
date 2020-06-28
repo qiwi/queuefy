@@ -36,33 +36,28 @@ export const isPromiseLike = (target: any): boolean =>
     && typeof target.then === 'function'
     && typeof target.catch === 'function'
 
-export const invoke = (fn: IAsyncFn, task: ITask, next: any): void => {
+export const compose = (cb: Function, next: Function) => <V>(v: V): void => {
+  cb(v)
+  next()
+}
+
+export const invoke = (fn: IAsyncFn, task: ITask, next: Function): void => {
   const {iop, args} = task
+  const resolve = compose(iop.resolve, next)
+  const reject = compose(iop.reject, next)
 
   try {
     const res = fn(...args)
 
     if (isPromiseLike(res)) {
-      res
-        .then(v => {
-          iop.resolve(v)
-          next()
-
-        })
-        .catch(v => {
-          iop.reject(v)
-          next()
-        })
+      res.then(resolve, reject)
     }
     else {
-      iop.resolve(res)
-      next()
+      resolve(res)
     }
-
   }
   catch (e) {
-    iop.reject(e)
-    next()
+    reject(e)
   }
 }
 
