@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/qiwi/queuefy/compare/v1.1.0...v1.1.1) (2020-07-01)
+
+
+### Performance Improvements
+
+* tune up queue callbacks ([b68abe3](https://github.com/qiwi/queuefy/commit/b68abe3876540a27465691c02f82d51d8431e876))
+
 # [1.1.0](https://github.com/qiwi/queuefy/compare/v1.0.0...v1.1.0) (2020-05-18)
 
 
