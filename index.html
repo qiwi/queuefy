@@ -80,11 +80,11 @@ npm i queuefy</code></pre>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {queuefy} <span class="hljs-keyword">from</span> <span class="hljs-string">'queuefy'</span>
+				<pre><code class="language-typescript"><span class="hljs-keyword">import</span> {queuefy} <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;queuefy&#x27;</span>
 
 <span class="hljs-keyword">let</span> count = <span class="hljs-number">0</span>
 <span class="hljs-keyword">const</span> target = <span class="hljs-function">(<span class="hljs-params">param: <span class="hljs-built_in">number</span></span>) =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function"><span class="hljs-params">resolve</span> =&gt;</span>
-  setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-built_in">setTimeout</span>(<span class="hljs-function">() =&gt;</span> {
     count++
     resolve(count + param)
   }, <span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">100</span>),
@@ -108,8 +108,8 @@ npm i queuefy</code></pre>
 					<li class="globals  ">
 						<a href="globals.html"><em>Globals</em></a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="modules/_index_.html">&quot;index&quot;</a>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="modules/reflection-34.html">&lt;em&gt;<wbr>Module&lt;/em&gt;</a>
 					</li>
 				</ul>
 			</nav>
@@ -124,11 +124,6 @@ npm i queuefy</code></pre>
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
-			<ul class="tsd-legend">
-				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
-				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
-				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-			</ul>
 		</div>
 	</div>
 </footer>
