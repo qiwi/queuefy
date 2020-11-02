@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/qiwi/queuefy/compare/v1.1.2...v1.1.3) (2020-11-02)
+
+
+### Bug Fixes
+
+* **package:** up deps, fix vuls ([d64ad75](https://github.com/qiwi/queuefy/commit/d64ad75d6b72740bd72ee5f8dfa3da9a7c204f3d))
+
 ## [1.1.2](https://github.com/qiwi/queuefy/compare/v1.1.1...v1.1.2) (2020-09-24)
 
 
