@@ -49,10 +49,10 @@ describe('queuefy', () => {
     ])
 
     expect(r1).toBe('ok1')
-    expect(r2).toBe('fail2')
+    expect(r2).toEqual(new Error('fail2'))
     expect(r3).toBe('ok3')
     expect(r4).toBe('ok4')
-    expect(r5).toBe('fail5')
+    expect(r5).toEqual(new Error('fail5'))
   })
 
   it('captures thrown exceptions', async() => {
