@@ -31,7 +31,7 @@ describe('queuefy', () => {
       setTimeout(() => {
         count++
         if (param === 'fail') {
-          reject(param + count)
+          reject(new Error(param + count))
         }
         else {
           resolve(param + count)

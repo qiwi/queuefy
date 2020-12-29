@@ -1,7 +1,11 @@
+import {
+  ICallable
+} from '@qiwi/substrate'
+
 export type TInsideOutPromise = {
   promise: Promise<any>,
-  resolve: Function,
-  reject: Function
+  resolve: ICallable,
+  reject: ICallable
 }
 
 export type IAsyncFn = (...args: any[]) => Promise<any>
@@ -32,16 +36,16 @@ export const getPromise = (): TInsideOutPromise => {
  * @param target
  */
 export const isPromiseLike = (target: any): boolean =>
-  target
+  !!target
     && typeof target.then === 'function'
     && typeof target.catch === 'function'
 
-export const compose = (cb: Function, next: Function) => <V>(v: V): void => {
+export const compose = (cb: ICallable, next: ICallable) => <V>(v: V): void => {
   cb(v)
   next()
 }
 
-export const invoke = (fn: IAsyncFn, task: ITask, next: Function): void => {
+export const invoke = (fn: IAsyncFn, task: ITask, next: ICallable): void => {
   const {iop, args} = task
   const resolve = compose(iop.resolve, next)
   const reject = compose(iop.reject, next)
