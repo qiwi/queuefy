@@ -1,3 +1,10 @@
+## [1.1.5](https://github.com/qiwi/queuefy/compare/v1.1.4...v1.1.5) (2021-03-11)
+
+
+### Performance Improvements
+
+* **pkg:** up deps ([af29a8b](https://github.com/qiwi/queuefy/commit/af29a8b9e1e526d2109bb3eadf2b461677d86110))
+
 ## [1.1.4](https://github.com/qiwi/queuefy/compare/v1.1.3...v1.1.4) (2020-12-29)
 
 
