@@ -1,3 +1,8 @@
+## [1.1.7](https://github.com/qiwi/queuefy/compare/v1.1.6...v1.1.7) (2022-11-19)
+
+### Fixes & improvements
+* docs: update badges ([29b7e75](https://github.com/qiwi/queuefy/commit/29b7e75f59fca7eed02dcec88376ff6314646c74))
+
 ## [1.1.6](https://github.com/qiwi/queuefy/compare/v1.1.5...v1.1.6) (2022-11-19)
 
 ### Fixes & improvements
