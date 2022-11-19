@@ -1,3 +1,8 @@
+## [1.1.6](https://github.com/qiwi/queuefy/compare/v1.1.5...v1.1.6) (2022-11-19)
+
+### Fixes & improvements
+* fix: update deps, migrate to gh actions (#44) ([8ac8efa](https://github.com/qiwi/queuefy/commit/8ac8efa280d6f988a25d0215766b1b7431213a43))
+
 ## [1.1.5](https://github.com/qiwi/queuefy/compare/v1.1.4...v1.1.5) (2021-03-11)
 
 
