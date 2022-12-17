@@ -54,7 +54,7 @@
   "author": "Anton Golub <a.golub@qiwi.com>",
   "license": "MIT",
   "devDependencies": {
-    "@qiwi/libdefkit": "^4.0.8",
+    "@qiwi/libdefkit": "^5.0.0",
     "@qiwi/npm-run-all": "^4.1.7",
     "@types/jest": "^29.2.2",
     "@types/node": "^18.11.9",
