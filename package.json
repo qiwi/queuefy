@@ -74,6 +74,6 @@
   },
   "dependencies": {
     "tslib": "^2.4.1",
-    "@qiwi/substrate": "^1.20.15"
+    "@qiwi/substrate": "^2.0.0"
   }
 }
