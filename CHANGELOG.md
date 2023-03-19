@@ -1,3 +1,8 @@
+## [1.2.0](https://github.com/qiwi/queuefy/compare/v1.1.7...v1.2.0) (2023-03-19)
+
+### Features
+* feat: introduce concurrency opt ([2ce7e83](https://github.com/qiwi/queuefy/commit/2ce7e83cbae3e035ff28603ac928ea679d548b42))
+
 ## [1.1.7](https://github.com/qiwi/queuefy/compare/v1.1.6...v1.1.7) (2022-11-19)
 
 ### Fixes & improvements
