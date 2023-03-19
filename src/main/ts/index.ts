@@ -65,30 +65,30 @@ export const invoke = (fn: IAsyncFn, task: ITask, next: ICallable): void => {
   }
 }
 
-export const queuefy = <T extends IAsyncFn>(fn: T): T => {
+export const queuefy = <T extends IAsyncFn>(fn: T, limit = 1): T => {
   const queue: ITaskQueue = []
   const processQueue = (): void => {
-    const task = queue[0]
+    if (limit === 0) {
+      return
+    }
 
+    const task = queue.shift()
     if (!task) {
       return
     }
 
-    invoke(fn, task, next)
-  }
-  const next = () => {
-    queue.shift()
-    processQueue()
+    limit--
+    invoke(fn, task, () => {
+      limit++
+      processQueue()
+    })
   }
 
   return ((...args: any[]): any => {
     const iop = getPromise()
 
     queue.push({args, iop})
-
-    if (queue.length === 1) {
-      processQueue()
-    }
+    processQueue()
 
     return iop.promise
   }) as T

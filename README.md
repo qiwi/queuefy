@@ -4,7 +4,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/2392bab0fb3bfa330f74/test_coverage)](https://codeclimate.com/github/qiwi/queuefy/test_coverage)
 [![npm (tag)](https://img.shields.io/npm/v/queuefy)](https://www.npmjs.com/package/queuefy)
 
-Wrapper to make any async handler be like a single thread with a queue.
+Wrapper to make any async handler act like a single thread with a queue.
 
 ## Install
 ```shell script

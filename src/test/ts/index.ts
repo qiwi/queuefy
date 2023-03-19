@@ -70,4 +70,18 @@ describe('queuefy', () => {
 
     expect(await fn()).toBe('foo')
   })
+
+  it('supports concurrency opt', async () => {
+    const f = () => new Promise(resolve =>
+      setTimeout(() => resolve(1), 50),
+    )
+    const now = Date.now()
+    const q = queuefy(f, 3)
+
+    await Promise.all([q(), q(), q(), q(), q(), q()])
+
+    const diff = Date.now() - now
+    expect( diff < 110).toBeTruthy()
+    expect( diff >= 100).toBeTruthy()
+  })
 })
