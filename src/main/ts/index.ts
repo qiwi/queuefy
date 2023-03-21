@@ -1,4 +1,4 @@
-import {
+import type {
   ICallable
 } from '@qiwi/substrate'
 
