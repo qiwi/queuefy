@@ -1,7 +1,7 @@
 {
   "name": "queuefy",
   "alias": "@qiwi/queuefy",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
   "description": "Wrapper to make any async handler be like a single thread with queue",
   "source": "src/main/ts/index.ts",

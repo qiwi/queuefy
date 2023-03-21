@@ -1,3 +1,8 @@
+## [1.2.1](https://github.com/qiwi/queuefy/compare/v1.2.0...v1.2.1) (2023-03-21)
+
+### Fixes & improvements
+* fix: deps revision ([ac3266e](https://github.com/qiwi/queuefy/commit/ac3266ed81e441b7130c4d424d305ddd2da5d9b9))
+
 ## [1.2.0](https://github.com/qiwi/queuefy/compare/v1.1.7...v1.2.0) (2023-03-19)
 
 ### Features
