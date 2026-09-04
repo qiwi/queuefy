@@ -62,7 +62,7 @@
     "rimraf": "^5.0.0",
     "terser": "^5.16.6",
     "cpy-cli": "^4.2.0",
-    "eslint": "^8.36.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-qiwi": "^2.1.1",
     "typedoc": "^0.24.0",
